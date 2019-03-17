@@ -13,18 +13,4 @@ export class PeopleComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  onEmptyDisable(event: any){
-    if (event.target.value !== '') {
-      this.allowResetName = true;
-    } else {
-      this.allowResetName = false;
-    }
-  }
-
-  onResetButton(){
-    this.username = '';
-    this.allowResetName = false;
-  }
-
 }
