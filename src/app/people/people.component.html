@@ -1,3 +1,20 @@
-<input
-  type="text"
-  class=form-control>
+<div id="holder" class="container">
+  <div class="row">
+    <div class="col-lg-6">
+        <label>Person name</label><br>
+        <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="username"
+        (keyup)="onEmptyDisable($event)">
+        <p>{{ username }}</p>
+        <br>
+        <button
+          class="btn btn-primary"
+          [disabled]="!allowResetName"
+          (click)="onResetButton()">
+          Clear
+        </button>
+    </div>
+  </div>
+</div>
